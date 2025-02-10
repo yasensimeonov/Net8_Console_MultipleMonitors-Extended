@@ -4,8 +4,6 @@ namespace Console_MultipleMonitors_ExtendDisplays;
 
 public static class MonitorNativeMethods
 {
-    private const int CCHDEVICENAME = 32;
-
     [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
     [return: MarshalAs(UnmanagedType.Bool)]
     public static extern bool EnumDisplayMonitors(IntPtr hdc, IntPtr lprcClip, MonitorEnumProc lpfnEnum, IntPtr dwData);
